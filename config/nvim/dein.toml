@@ -1,0 +1,33 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+
+[[plugins]]
+repo = 'Shougo/neoinclude.vim'
+
+[[plugins]]
+repo = 'kovisoft/slimv'
+
+[[plugins]]
+repo = 'eagletmt/ghcmod-vim'
+
+[[plugins]]
+repo = 'eagletmt/neco-ghc'
+
+[[plugins]]
+repo = 'suan/vim-instant-markdown'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'fatih/vim-go'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
