@@ -114,4 +114,4 @@ set mouse=
 "Make backspace not delete newlines"
 set backspace=1
 
-source ~/.vim/hilinks.vim
+source ~/.config/nvim/hilinks.vim
