@@ -10,11 +10,11 @@ endif
 let &runtimepath = s:dein_repo_dir .",". &runtimepath
 
 let s:toml = fnamemodify(expand('<sfile>'), ':h').'/dein.toml'
-let s:toml_lazy = fnamemodify(expand('<sfile>'), ':h').'/dein_lazy.toml'
+let s:lazy_toml = fnamemodify(expand('<sfile>'), ':h').'/dein_lazy.toml'
 if dein#load_state(s:dein_dir)
   call dein#begin(s:dein_dir)
   call dein#load_toml(s:toml)
-  call dein#load_toml(s:toml_lazy, {'lazy': 1})
+  call dein#load_toml(s:lazy_toml, {'lazy': 1})
   call dein#end()
   call dein#save_state()
 endif
@@ -53,6 +53,8 @@ else
 	let g:clang_exec = 'clang-format'
 endif
 
+let g:deoplete#enable_at_startup = 1
+
 filetype plugin indent on
 syntax enable
 
@@ -86,11 +88,14 @@ set cursorline
 colorscheme tomoyat1
 
 au BufRead,BufNewFile *.md set filetype=markdown
+au BufRead,BufNewFile *.rs set filetype=rust
+au BufRead,BufNewFile *.toml set filetype=toml
 "Filetype specific tab settings"
 autocmd Filetype cabal setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype eruby setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype haskell setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype haskell setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype html setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
@@ -98,7 +103,9 @@ autocmd Filetype lisp setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype lua setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype scala setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 
 "Disable scroll"
