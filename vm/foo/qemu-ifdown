@@ -1,0 +1,4 @@
+#!/bin/sh 
+#sysctl net.ipv4.ip_forward=0
+ifconfig tap0 down
+tunctl -d tap0

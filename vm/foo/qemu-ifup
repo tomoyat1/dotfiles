@@ -1,0 +1,12 @@
+#!/bin/sh
+#echo 1 > /proc/sys/net/ipv4/ip_forward
+tunctl -t tap0
+ifconfig tap0 up
+ifconfig tap0 10.2.0.1/24
+route add -host 10.2.0.2 dev tap0
+iptables -t nat -A POSTROUTING -o br0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o tun0 -j MASQUERADE
+iptables -t nat -A POSTROUTING -o enp0s31f6 -j MASQUERADE
+iptables -I FORWARD 1 -i tap0 -j ACCEPT
+iptables -I FORWARD 1 -o tap0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+sysctl net.ipv4.ip_forward=1
