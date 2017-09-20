@@ -143,8 +143,12 @@ export PATH="$HOME/bin:$PATH"
 
 #texlive
 export PATH="/usr/local/texlive/2016/bin/x86_64-linux:$PATH"
+
 #cargo
-export PATH="/home/tomoyat1/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+
+#local
+export PATH="$HOME/.local/bin:$PATH"
 
 #sculd ENV¬
 export CAMPH_SCHED_URL=https://cal.camph.net/private/schedule.json¬
@@ -223,16 +227,5 @@ unsetopt equals
 eval `keychain --agents ssh,gpg --quiet --eval ~/.ssh/id_rsa`
 
 export GPG_TTY=`tty`
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f /home/tomoyat1/google-cloud-sdk/path.zsh.inc ]; then
-  source '/home/tomoyat1/google-cloud-sdk/path.zsh.inc'
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f /home/tomoyat1/google-cloud-sdk/completion.zsh.inc ]; then
-  source '/home/tomoyat1/google-cloud-sdk/completion.zsh.inc'
-fi
-
 
 auto-proxy
