@@ -114,7 +114,7 @@ alias ovim="vim"
 #VISUAL variable for default visudo editor
 export VISUAL="/usr/bin/nvim"
 
-export GOPATH=$HOME/src/go/
+export GOPATH=$HOME/src/go
 
 #prompt
 autoload -Uz vcs_info
