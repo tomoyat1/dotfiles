@@ -246,3 +246,7 @@ sudo-last()
 {
 	sudo $(history | tail -1 | sed 's/\ .*\ \ //g')
 }
+# gen-pass
+function gen-pass() {
+	cat /dev/urandom | tr -dc 0-9a-zA-Z | fold -$1 | head -10
+}
