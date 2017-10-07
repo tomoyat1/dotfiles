@@ -100,21 +100,23 @@ alias ls="ls -p --color=auto"
 #sudo aliases
 alias suod="sudo"
 
+#archive-date
+alias archive-date="date +%Y%m%d%H%M"
+
 #pbcopy
 alias pbcopy="xsel --clipboard --input"
-
-alias scan="sudo iwlist wlp3s0 scan | grep tomoyat1"
 
 # neovim
 alias vim="nvim"
 
-#ovim
-alias ovim="vim"
+#neomutt
+alias mutt="neomutt"
+
+#ls -l
+alias l="ls -al"
 
 #VISUAL variable for default visudo editor
 export VISUAL="/usr/bin/nvim"
-
-export GOPATH=$HOME/src/go
 
 #prompt
 autoload -Uz vcs_info
@@ -141,6 +143,9 @@ export PATH="$HOME/opt/i686/bin:$PATH"
 #personal scripts
 export PATH="$HOME/bin:$PATH"
 
+#stack
+export PATH="$HOME/.local/bin:$PATH"
+
 #texlive
 export PATH="/usr/local/texlive/2016/bin/x86_64-linux:$PATH"
 
@@ -150,10 +155,17 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #local
 export PATH="$HOME/.local/bin:$PATH"
 
-#sculd ENV¬
-export CAMPH_SCHED_URL=https://cal.camph.net/private/schedule.json¬
-export CAMPH_SCHED_USER=camphor¬
-export CAMPH_SCHED_PASS=borYgrsnVzDV6L4cBAua¬
+#sculd ENV
+export CAMPH_SCHED_URL=https://cal.camph.net/private/schedule.json
+export CAMPH_SCHED_USER=camphor
+export CAMPH_SCHED_PASS=borYgrsnVzDV6L4cBAua
+
+#gopath
+export GOPATH="$HOME/src/go"
+export PATH="$GOPATH/bin:$PATH"
+
+#yarn path
+export PATH="$(yarn global bin --offline):$PATH"
 
 #tomoyat1-t alias
 alias tomoyat1-t="mosh t@tomoyat1.com -- /usr/home/t/bin/tmux-starter"
@@ -222,10 +234,15 @@ fi
 setopt extendedglob
 unsetopt equals
 
-# WHY YOU NO WORK!? ****ING BUGGED
-# eval `keychain --agents ssh,gpg --quiet --eval ~/.ssh/id_rsa 404409F044C5959D`
 eval `keychain --agents ssh,gpg --quiet --eval ~/.ssh/id_rsa`
+. ~/.keychain/$HOST-sh
+. ~/.keychain/$HOST-sh-gpg
 
 export GPG_TTY=`tty`
 
 auto-proxy
+# sudo-last
+sudo-last()
+{
+	sudo $(history | tail -1 | sed 's/\ .*\ \ //g')
+}
