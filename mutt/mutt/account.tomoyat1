@@ -1,0 +1,24 @@
+set from = "Tomoya Tabuchi <t@tomoyat1.com>"
+set use_from = yes
+set hostname = "tomoyat1.com"
+set imap_user = 't'
+set imap_pass = 'j32r4tW$OqvFv7In'
+set folder = 'imaps://mail.tomoyat1.com/'
+set spoolfile = "+INBOX"
+mailboxes imaps://mail.tomoyat1.com/INBOX
+set smtp_url = "smtp://t@mail.tomoyat1.com:587"
+set smtp_pass = 'j32r4tW$OqvFv7In'
+set record = "imaps://mail.tomoyat1.com/Sent"
+
+
+set realname = 'Tomoya Tabuchi'
+set ssl_force_tls = yes
+set ssl_starttls = yes
+
+subscribe x11@FreeBSD.org
+subscribe svn-src-head
+subscribe freebsd-current@freebsd.org
+subscribe current@freebsd.org
+subscribe freebsd-hackers@freebsd.org
+subscribe freebsd-doc@freebsd.org
+subscribe freebsd-users-jp@freebsd.org

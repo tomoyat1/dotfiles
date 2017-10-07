@@ -1,0 +1,15 @@
+set from = "YAWG Support <support@yawg-game.com>"
+set use_from = yes
+set hostname = "yawg-game.com"
+set imap_user = 'support@yawg-game.com'
+set imap_pass = 'j32r4tW$OqvFv7In'
+set folder = 'imaps://mail.yawg-game.com/'
+set spoolfile = "+INBOX"
+mailboxes imaps://mail.yawg-game.com/INBOX
+set smtp_url = "smtp://t@mail.tomoyat1.com:587"
+set smtp_pass = 'j32r4tW$OqvFv7In'
+set record = "imaps://mail.yawg-game.com/Sent"
+
+set realname = 'YAWG Support'
+set ssl_force_tls = yes
+set ssl_starttls = yes

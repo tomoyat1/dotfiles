@@ -1,0 +1,13 @@
+set from="Tomoya Tabuchi <tomoyat1@gmail.com>"
+set hostname=gmail.com
+set imap_user='tomoyat1@gmail.com'
+set imap_pass='Sm2!MZE2bx[~VZfBC[WA'
+set folder='imaps://imap.gmail.com/'
+set spoolfile="+INBOX"
+mailboxes imaps://imap.gmail.com/INBOX
+set smtp_url="smtp://tomoyat1@smtp.gmail.com:587/"
+set smtp_pass = 'Sm2!MZE2bx[~VZfBC[WA'
+set record = "imaps://imap.gmail.com/[Gmail]/送信済みメール"
+
+set realname = 'Tomoya Tabuchi'
+set use_from = yes

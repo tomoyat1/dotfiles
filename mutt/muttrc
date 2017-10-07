@@ -1,0 +1,43 @@
+ignore *
+
+# ... then allow these through.
+unignore from: subject to cc date x-mailer x-url user-agent
+
+# Display the fields in this order
+hdr_order date from to cc subject
+
+set editor=`echo $EDITOR`
+set record = +Sent
+macro index <f2> '<change-folder>imaps://t@mail.tomoyat1.com<enter>'
+macro index <f3> '<change-folder>imaps://imap.gmail.com<enter>'
+macro index <f4> '<change-folder>imaps://mail.yawg-game.com<enter>'
+
+folder-hook 't@tomoyat1.com' 'source ~/.mutt/account.tomoyat1'
+folder-hook 'gmail.com' 'source ~/.mutt/account.gmail'
+folder-hook 'yawg-game.com' 'source ~/.mutt/account.yawg'
+
+source ~/.mutt/account.tomoyat1
+
+macro index  \cb |urlview\n
+macro pager \cb |urlview\n
+set pipe_decode=yes
+set mailcap_path = ~/.mutt/mailcap
+
+color normal default default
+set sort = threads
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+bind index g noop
+bind index gg first-entry
+bind index G last-entry
+bind index F flag-message
+
+bind pager k previous-line
+bind pager j next-line
+bind pager g top
+bind pager G bottom
+
+source ~/.mutt/gpg.rc
+
+alternative_order text/plain text/enriched text/html
+auto_view text/html
