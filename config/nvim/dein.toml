@@ -11,10 +11,7 @@ repo = 'Shougo/neoinclude.vim'
 repo = 'kovisoft/slimv'
 
 [[plugins]]
-repo = 'eagletmt/ghcmod-vim'
-
-[[plugins]]
-repo = 'eagletmt/neco-ghc'
+repo = 'neomake/neomake'
 
 [[plugins]]
 repo = 'suan/vim-instant-markdown'
