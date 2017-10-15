@@ -85,7 +85,7 @@ set laststatus=2
 "Highlight cursor line"
 set cursorline
 
-colorscheme tomoyat1
+colorscheme tomoyat1-ng
 
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.rs set filetype=rust
