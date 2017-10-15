@@ -1,0 +1,54 @@
+URxvt*depth:	32
+URxvt*foreground:	#EEEEEE
+urxvt*background: rgba:3900/3900/4000/e666
+URxvt*scrollBar:	false
+
+URxvt*font:	xft:M+ 1mn light:size=11:style=light,xft:Dejavu Sans Mono:size=11
+URxvt*boldFont:	xft:M+ 1mn bold:size=11:style=bold,xft:Dejavu Sans Mono:size=11
+
+URxvt.inputMethod: fcitx
+URxvt.preeditType: OnTheSpot
+URxvt.perl-ext: xim-onthespot
+
+Xft*antialias:	True
+Xft*hinting:	Full
+
+Xcursor.size: 16
+Xcursor.theme: Adwaita
+
+! special
+*.foreground:   #eeeeee
+*.background:   #393940
+*.cursorColor:  #eeeeee
+
+! black
+*.color0:       #0c0d0e
+*.color8:       #737475
+
+! red
+*.color1:       #ff5454
+*.color9:       #ff8787
+
+! green
+*.color2:       #54ff54
+*.color10:      #88ff87
+
+! yellow
+*.color3:       #ffd154
+*.color11:      #ffe287
+
+! blue
+*.color4:       #5482ff
+*.color12:      #87afff
+
+! magenta
+*.color5:       #7654ff
+*.color13:      #9e87ff
+
+! cyan
+*.color6:       #54e8ff
+*.color14:      #87f0ff
+
+! white
+*.color7:       #b7b8b9
+*.color15:      #eeeeee
