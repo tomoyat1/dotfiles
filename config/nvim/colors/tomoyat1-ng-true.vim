@@ -46,7 +46,7 @@ hi Identifier	guifg=#87f0ff gui=bold
 hi Statement	guifg=#ffe287 gui=none cterm=none
 hi PreProc	guifg=#9587ff
 hi Type		guifg=#54ff54 gui=none
-hi Special	guifg=navajowhite
+hi Special	guifg=#ff8787
 "hi Underlined
 hi Ignore	guifg=grey40
 hi Error	guifg=#eeeeee guibg=#ff5454
