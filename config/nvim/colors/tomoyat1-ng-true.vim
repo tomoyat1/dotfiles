@@ -7,25 +7,25 @@ let g:colors_name = "tomoyat1 truecolors"
 "let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 
-hi Normal	guifg=White ctermfg=231 cterm=none
+hi Normal	guifg=#eeeeee
 
-hi VertSplit	guifg=#87afff guibg=#00005f ctermfg=111 ctermbg=017
-hi Folded	guibg=#afd7ff guifg=#585858 ctermfg=153 ctermbg=240
-hi FoldedColumn	guibg=#afd7ff guifg=#585858 ctermfg=153 ctermbg=240
-hi IncSearch	guifg=#87afff guibg=#00005f ctermfg=111 ctermbg=017
-hi LineNr	guifg=#87afff ctermfg=111
+hi VertSplit	guifg=#87afff guibg=#00005f
+hi Folded	guibg=#afd7ff guifg=#585858
+hi FoldedColumn	guibg=#afd7ff guifg=#585858
+hi IncSearch	guifg=#87afff guibg=#00005f
+hi LineNr	guifg=#87afff
 hi clear CursorLine
-hi CursorLine gui=underline cterm=underline
-hi CursorLineNr	guifg=#87d7ff ctermfg=117
-hi ModeMsg	guifg=goldenrod
-hi MoreMsg	guifg=SeaGreen
-hi NonText	guifg=#5f87d7 ctermfg=68
-hi Question	guifg=springgreen
-hi Search	guifg=#afd7ff guibg=#585858 ctermbg=153 ctermfg=240
+hi CursorLine	guibg=#303036 cterm=underline
+hi CursorLineNr	guifg=#87d7ff
+hi ModeMsg	guifg=#eeeeee
+hi MoreMsg	guifg=#eeeeee
+hi NonText	guifg=#5f87d7 ctermfg=68 gui=none
+hi Question	guifg=#54ff54 gui=bold
+hi Search	guifg=#afd7ff guibg=#585858
 hi SpecialKey	guifg=#5f87d7 ctermfg=68
-hi StatusLine	guifg=#87afff guibg=#00005f ctermfg=111 ctermbg=017
-hi StatusLineNC	guifg=#87afff guibg=#00005f ctermfg=111 ctermbg=017
-hi Title	guifg=#87afff ctermfg=111
+hi StatusLine	guifg=#87afff guibg=#00005f
+hi StatusLineNC	guifg=#87afff guibg=#00005f
+hi Title	guifg=#87afff ctermfg=111 gui=none
 hi Visual	guibg=#4e4e4e ctermbg=239
 "hi VisualNOS
 hi WarningMsg	guifg=#800000 ctermfg=1
@@ -54,6 +54,6 @@ hi ErrorMsg	guifg=#eeeeee guibg=#ff5454
 hi Todo		guifg=#0c0d0e guibg=#ffd154
 
 "deoplete colors"
-hi Pmenu guifg=#00005f guibg=#87afff ctermfg=017 ctermbg=111
-hi PmenuSel  guifg=#87afff guibg=#00005f ctermfg=111 ctermbg=017
-hi PmenuSbar  guifg=#00005f guibg=#87afff ctermfg=017 ctermbg=111
+hi Pmenu guifg=#00005f guibg=#87afff
+hi PmenuSel  guifg=#87afff guibg=#00005f
+hi PmenuSbar  guifg=#00005f guibg=#87afff
