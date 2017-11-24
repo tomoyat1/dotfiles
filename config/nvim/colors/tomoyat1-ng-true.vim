@@ -19,14 +19,14 @@ hi CursorLine	guibg=#303036 cterm=underline
 hi CursorLineNr	guifg=#87d7ff
 hi ModeMsg	guifg=#eeeeee
 hi MoreMsg	guifg=#eeeeee
-hi NonText	guifg=#5f87d7 ctermfg=68 gui=none
+hi NonText	guifg=#5f87d7 gui=none
 hi Question	guifg=#54ff54 gui=bold
 hi Search	guifg=#afd7ff guibg=#585858
-hi SpecialKey	guifg=#5f87d7 ctermfg=68
+hi SpecialKey	guifg=#5f87d7
 hi StatusLine	guifg=#87afff guibg=#00005f
 hi StatusLineNC	guifg=#87afff guibg=#00005f
-hi Title	guifg=#87afff ctermfg=111 gui=none
-hi Visual	guibg=#4e4e4e ctermbg=239
+hi Title	guifg=#87afff gui=none
+hi Visual	guibg=#4e4e4e
 "hi VisualNOS
 hi WarningMsg	guifg=#800000 guibg=#eeeeee gui=reverse
 "hi WildMenu
