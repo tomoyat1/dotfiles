@@ -1,0 +1,66 @@
+[global_config]
+  borderless = True
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, MavenPluginURLHandler
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = tomoyat1-purple
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.04
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    custom_command = tmux new-session -s tomoyat1 || tmux new-session -a tomoyat1
+    font = Sans 8
+    palette = "#000000:#cd0000:#00cd00:#cdcd00:#0000ee:#cd00cd:#00cdcd:#e5e5e5:#7f7f7f:#ff0000:#00ff00:#ffff00:#5c5cff:#ff00ff:#00ffff:#ffffff"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+  [[awesome]]
+    background_color = "#393940"
+    background_darkness = 0.93
+    background_type = transparent
+    cursor_color = "#eeeeee"
+    custom_command = TERM=xterm-256color tmux -2 new-session -s tomoyat1 || TERM=xterm-256color tmux -2 new-session -t tomoyat
+    font = M+ 1mn Light 11
+    foreground_color = "#eeeeee"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_custom_command = True
+  [[tomoyat1]]
+    background_color = "#393940"
+    cursor_color = "#aaaaaa"
+    custom_command = TERM=xterm-256color tmux new-session -s tomoyat1 || TERM=xterm-256color tmux new-session -t tomoyat
+    font = M+ 1m Light 11.5
+    foreground_color = "#eeeeee"
+    palette = "#0c0d0e:#ff5454:#54ff54:#ffd154:#5482ff:#7654ff:#54e8ff:#b7b8b9:#737475:#ff8787:#88ff87:#ffe287:#87afff:#9e87ff:#87f0ff:#eeeeee"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_custom_command = True
+    use_system_font = False
+  [[tomoyat1-purple]]
+    background_color = "#35332b"
+    cursor_color = "#eeeeee"
+    custom_command = TERM=xterm-256color tmux new-session -s tomoyat1 || TERM=xterm-256color tmux new-session -t tomoyat
+    font = M+ 1m Light 11.5
+    foreground_color = "#eeeeee"
+    palette = "#0c0d0e:#b07676:#71af71:#b0a476:#7681b0:#9976b0:#76b0b0:#b7b8b9:#757573:#e69595:#95e695:#e6d195:#95a2e6:#c895e6:#95e6e6:#eeeeee"
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_custom_command = True
+    use_system_font = False
+  [[transparent]]
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = M+ 1mn Light 11.5
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
