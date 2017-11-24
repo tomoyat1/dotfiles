@@ -1,21 +1,3 @@
-URxvt*depth:	32
-URxvt*foreground:	#EEEEEE
-urxvt*background: rgba:3900/3900/4000/e666
-URxvt*scrollBar:	false
-
-URxvt*font:	xft:M+ 1mn light:size=11:style=light,xft:Dejavu Sans Mono:size=11
-URxvt*boldFont:	xft:M+ 1mn bold:size=11:style=bold,xft:Dejavu Sans Mono:size=11
-
-URxvt.inputMethod: fcitx
-URxvt.preeditType: OnTheSpot
-URxvt.perl-ext: xim-onthespot
-
-Xft*antialias:	True
-Xft*hinging:	Full
-
-Xcursor.size: 16
-Xcursor.theme: Adwaita
-
 ! special
 *.foreground:   #eeeeee
 *.background:   #35332b
