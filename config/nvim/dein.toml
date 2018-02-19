@@ -40,3 +40,11 @@ repo = 'Shougo/denite.nvim'
 
 [[plugins]]
 repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+build = 'bash install.sh'

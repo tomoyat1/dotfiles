@@ -82,6 +82,17 @@ command HereticIndent set ts=2 sts=2 sw=2 expandtab
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
+"Haskell"
+let g:LanguageClient_serverCommands = {
+	\ 'haskell': ['hie', '--lsp'],
+\ }
+
+"OCaml"
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+let g:syntastic_ocaml_checkers = ['merlin']
+execute "set rtp+=" . g:opamshare . "/typerex/ocp-indent/vim"
+
 "Highlight cursor line"
 set cursorline
 
@@ -107,6 +118,7 @@ autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scala setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype terraform setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 
