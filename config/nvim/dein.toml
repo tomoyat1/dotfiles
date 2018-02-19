@@ -45,6 +45,9 @@ repo = 'altercation/vim-colors-solarized'
 repo = 'hashivim/vim-terraform'
 
 [[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
