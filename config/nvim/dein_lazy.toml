@@ -63,3 +63,4 @@ hook_source = '''
 [[plugins]]
 repo = 'Rip-Rip/clang_complete'
 on_ft = 'c'
+build = "vim clang_complete.vmb -c 'so %' -c 'q'"
