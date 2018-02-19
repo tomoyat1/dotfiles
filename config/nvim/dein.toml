@@ -48,3 +48,6 @@ repo = 'hashivim/vim-terraform'
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
 build = 'bash install.sh'
+
+[[plugins]]
+repo = 'rking/ag.vim'

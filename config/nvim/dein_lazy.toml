@@ -59,3 +59,7 @@ on_ft = 'javascript'
 hook_source = '''
     let g:jsx_ext_required = 0
 '''
+
+[[plugins]]
+repo = 'Rip-Rip/clang_complete'
+on_ft = 'c'
