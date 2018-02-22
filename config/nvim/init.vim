@@ -63,6 +63,7 @@ set wrap
 syntax on
 set ts=8 sw=8 sts=4
 set smartindent
+set nosmarttab
 set selectmode=mouse
 set incsearch ignorecase smartcase 
 set foldmethod=syntax
