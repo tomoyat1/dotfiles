@@ -98,7 +98,7 @@ export EDITOR="/usr/bin/nvim"
 alias ls="ls -p --color=auto"
 
 #sudo aliases
-alias suod="sudo"
+alias suod="sl"
 
 #archive-date
 alias archive-date="date +%Y%m%d%H%M"
