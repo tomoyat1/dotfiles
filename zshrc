@@ -161,7 +161,7 @@ export CAMPH_SCHED_USER=camphor
 export CAMPH_SCHED_PASS=borYgrsnVzDV6L4cBAua
 
 #gopath
-export GOPATH="$HOME/src/go"
+export GOPATH=${GOPATH:-"$HOME/src/go"}
 export PATH="$GOPATH/bin:$PATH"
 
 #yarn path
