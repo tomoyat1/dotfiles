@@ -1,0 +1,3 @@
+#!/usr/local/bin/zsh
+
+tmux new-session -s tomoyat1 || tmux new-session -t tomoyat1
