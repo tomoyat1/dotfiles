@@ -100,6 +100,18 @@ alias ls="ls -p --color=auto"
 #sudo aliases
 alias suod="sl"
 
+#kubectl aliases
+function kubeclt() {
+	echo "Do you mean 'kubectl'?"
+	kubectl "$@"
+}
+alias kg="kubectl get"
+alias kl="kubectl logs"
+alias kd="kubectl describe"
+
+#kubeconfig
+#export KUBECONFIG="$HOME/.kube/config:$HOME/.kube/skrillex"
+
 #archive-date
 alias archive-date="date +%Y%m%d%H%M"
 
@@ -147,13 +159,20 @@ export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 #texlive
-export PATH="/usr/local/texlive/2016/bin/x86_64-linux:$PATH"
+export PATH="/usr/local/texlive/2018/bin/x86_64-linux:$PATH"
 
 #cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 
 #local
 export PATH="$HOME/.local/bin:$PATH"
+
+#yarn
+export PATH="$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+#/usr/sbin
+export PATH="/usr/sbin:$PATH"
 
 #sculd ENV
 export CAMPH_SCHED_URL=https://cal.camph.net/private/schedule.json
@@ -166,6 +185,18 @@ export PATH="$GOPATH/bin:$PATH"
 
 #yarn path
 export PATH="$(yarn global bin --offline):$PATH"
+
+#gem path
+export PATH="$(gem environment gemdir)/bin:$PATH"
+
+#pyenv path
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+. $(pyenv root)/completions/pyenv.zsh
+
+# OPAM configuration
+. /home/tomoyat1/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 #tomoyat1-t alias
 alias tomoyat1-t="mosh t@tomoyat1.com -- /usr/home/t/bin/tmux-starter"
@@ -212,6 +243,15 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*' group-name ''
 setopt menu_complete
 
+# kops completion
+source <(kops completion zsh)
+
+# pipenv completion
+eval "$(pipenv --completion)"
+
+# graphql completion
+. <(graphql completion)
+
 promptinit; prompt gentoo
 
 
@@ -250,3 +290,6 @@ sudo-last()
 function gen-pass() {
 	cat /dev/urandom | tr -dc 0-9a-zA-Z | fold -$1 | head -10
 }
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
