@@ -50,7 +50,13 @@ repo = 'scrooloose/nerdtree'
 [[plugins]]
 repo = 'autozimu/LanguageClient-neovim'
 rev = 'next'
-build = 'bash install.sh'
+do = './install.sh'
 
 [[plugins]]
 repo = 'rking/ag.vim'
+
+[[plugins]]
+repo = 'gentoo/gentoo-syntax'
+
+[[plugins]]
+repo = 'elixir-editors/vim-elixir'
