@@ -1,6 +1,8 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+let g:python3_host_prog = '/home/tomoyat1/.pyenv/versions/3.8.0/bin/python'
+
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -122,6 +124,7 @@ colorscheme tomoyat1-ng-true-purple
 au BufRead,BufNewFile *.md set filetype=markdown
 au BufRead,BufNewFile *.rs set filetype=rust
 au BufRead,BufNewFile *.toml set filetype=toml
+au OptionSet diff let &cul=!v:option_new " disable cursor line in diff
 "Filetype specific tab settings"
 autocmd Filetype cabal setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype coffee setlocal ts=2 sts=2 sw=2 expandtab
@@ -135,11 +138,13 @@ autocmd Filetype json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype lisp setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype lua setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype markdown setlocal ts=4 sts=4 sw=4 expandtab
+autocmd Filetype ocaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype php setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype proto setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scala setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype scss setlocal ts=2 sts=2 sw=2 expandtab
-autocmd Filetype terraform setlocal ts=2 sts=2 sw=2 expandtab
+autocmd Filetype terraform setlocal ts=4 sts=4 sw=4 expandtab
 autocmd Filetype typescript setlocal ts=2 sts=2 sw=2 expandtab
 autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 
