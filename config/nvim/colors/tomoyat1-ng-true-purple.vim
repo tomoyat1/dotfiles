@@ -23,8 +23,8 @@ hi NonText	guifg=#7681b0 gui=none
 hi Question	guifg=#95e695 gui=bold
 hi Search	guifg=#76b0b0 guibg=#524D42
 hi SpecialKey	guifg=#7681b0
-hi StatusLine	guifg=#71677c guibg=#35332b
-hi StatusLineNC	guifg=#71677c guibg=#35332b
+hi StatusLine	guifg=#71677c guibg=#35332b gui=reverse,bold
+hi StatusLineNC	guifg=#71677c guibg=#35332b gui=reverse
 hi Title	guifg=#95a2e6 gui=none
 hi Visual	guibg=#4e4e4e
 "hi VisualNOS
