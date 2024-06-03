@@ -78,9 +78,6 @@ set fileencodings=utf-8,sjis,euc-jp,iso-2022-jp
 set autoread
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-"HereticIndent"
-command HereticIndent set ts=2 sts=2 sw=2 expandtab
-
 "Status line"
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [HEX=\%02.2B]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
@@ -152,6 +149,6 @@ autocmd Filetype yaml setlocal ts=2 sts=2 sw=2 expandtab
 set mouse=
 
 "Make backspace not delete newlines"
-set backspace=1
+set backspace=indent,eol
 
 source ~/.config/nvim/hilinks.vim
