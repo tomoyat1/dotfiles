@@ -71,10 +71,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 #local
 export PATH="$HOME/.local/bin:$PATH"
 
-#yarn
-export PATH="$HOME/.yarn/bin:$PATH"
-export PATH="$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-
 #/usr/sbin
 export PATH="/usr/sbin:$PATH"
 
@@ -85,17 +81,8 @@ export PATH="$HOME/.istioctl/bin:$PATH"
 export GOPATH=${GOPATH:-"$HOME/src/go"}
 export PATH="$GOPATH/bin:$PATH"
 
-#yarn path
-export PATH="$(yarn global bin --offline):$PATH"
-
 #gem path
 export PATH="$(gem environment gemdir)/bin:$PATH"
-
-#pyenv path
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-. $(pyenv root)/completions/pyenv.zsh
 
 # OPAM configuration
 . /home/tomoyat1/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
@@ -125,9 +112,6 @@ zstyle ':completion:*:manuals' separate-sections true
 zstyle ':completion:*' group-name ''
 setopt menu_complete
 setopt COMPLETE_ALIASES
-
-# pipenv completion
-eval "$(pipenv --completion)"
 
 autoload -Uz promptinit
 promptinit
