@@ -185,10 +185,6 @@ throw-space-3:
   mod: mod3
   key: 3
 
-throw-space-3:
-  mod: mod2
-  key: 3
-
 throw-space-4:
   mod: mod2
   key: 4
