@@ -183,3 +183,5 @@ if [ -f '/home/tomoyat1/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/to
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . ~/.fzf-tab/fzf-tab.plugin.zsh
+
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
