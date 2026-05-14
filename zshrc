@@ -59,9 +59,6 @@ export PATH="$HOME/opt/i686/bin:$PATH"
 #personal scripts
 export PATH="$HOME/bin:$PATH"
 
-#stack
-export PATH="$HOME/.local/bin:$PATH"
-
 #texlive
 export PATH="/usr/local/texlive/2019/bin/x86_64-linux:$PATH"
 
