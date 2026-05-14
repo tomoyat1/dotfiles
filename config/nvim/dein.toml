@@ -48,11 +48,6 @@ repo = 'hashivim/vim-terraform'
 repo = 'scrooloose/nerdtree'
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
-
-[[plugins]]
 repo = 'rking/ag.vim'
 
 [[plugins]]

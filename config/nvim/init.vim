@@ -1,7 +1,7 @@
 scriptencoding utf-8
 set encoding=utf-8
 
-let g:python3_host_prog = '/home/tomoyat1/.pyenv/versions/3.8.0/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 
 let s:cache_home = empty($XDG_CACHE_HOME) ? expand('~/.cache') : $XDG_CACHE_HOME
 let s:dein_dir = s:cache_home . '/dein'
@@ -90,12 +90,6 @@ let g:LanguageClient_serverCommands = {
 nnoremap <silent> K :call LanguageClient_textDocument_hover()<CR>
 nnoremap <silent> gd :call LanguageClient_textDocument_definition()<CR>
 nnoremap <silent> <F2> :call LanguageClient_textDocument_rename()<CR>
-
-"OCaml"
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-let g:syntastic_ocaml_checkers = ['merlin']
-execute "set rtp+=" . g:opamshare . "/typerex/ocp-indent/vim"
 
 "Denite"
 let g:unite_source_history_yank_enable = 1
