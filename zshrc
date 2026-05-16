@@ -157,6 +157,7 @@ function bounce_pods() {
 	done
 }
 
+. <(fzf --zsh)
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . ~/.fzf-tab/fzf-tab.plugin.zsh
 
