@@ -41,20 +41,9 @@ RPROMPT='%~ ${vcs_info_msg_0_}'
 #history
 export HISTSIZE=2000
 export HISTFILE="$HOME/.history"
-
-export SAVEHIST=$HISTSIZE
+export SAVEHIST=4000
+setopt hist_find_no_dups
 setopt hist_ignore_all_dups
-
-# linuxbrew
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew";
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar";
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew";
-export PATH="/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin${PATH+:$PATH}";
-export MANPATH="/home/linuxbrew/.linuxbrew/share/man${MANPATH+:$MANPATH}:";
-export INFOPATH="/home/linuxbrew/.linuxbrew/share/info${INFOPATH+:$INFOPATH}";
-
-#tomos toolchain
-export PATH="$HOME/opt/i686/bin:$PATH"
 
 #personal scripts
 export PATH="$HOME/bin:$PATH"
@@ -110,10 +99,6 @@ zstyle ':completion:*' group-name ''
 setopt menu_complete
 setopt COMPLETE_ALIASES
 
-autoload -Uz promptinit
-promptinit
-
-
 autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -124,16 +109,14 @@ bindkey '^[[B' down-line-or-beginning-search
 bindkey -M vicmd 'k' up-line-or-beginning-search
 bindkey -M vicmd 'j' down-line-or-beginning-search
 
-if [ -e $TMUX ]; then
+if [ -n "$TMUX" ]; then
 	export TERM=xterm-256color
 fi
 
-
-#. /etc/profile.d/vte-2.91.sh
-
 setopt extendedglob
+setopt share_history
+setopt extended_history
 unsetopt equals
-
 
 # sudo-last
 sudo-last()
@@ -142,7 +125,7 @@ sudo-last()
 }
 
 if [ -e $TERM -o $TERM != screen-256color ]; then
-	export TERM=xterm-256color
+      export TERM=xterm-256color
 fi
 
 export NVM_DIR="$HOME/.nvm"
@@ -154,9 +137,8 @@ export SDKMAN_DIR="/home/tomoyat1/.sdkman"
 [[ -s "/home/tomoyat1/.sdkman/bin/sdkman-init.sh" ]] && source "/home/tomoyat1/.sdkman/bin/sdkman-init.sh"
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /home/tomoyat1/bin/vault vault
 
-complete -o nospace -C /home/tomoyat1/bin/terraform terraform
+complete -o nospace -C $HOME/bin/terraform terraform
 
 source <(kubectl completion zsh)
 
@@ -175,13 +157,14 @@ function bounce_pods() {
 	done
 }
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/tomoyat1/google-cloud-sdk/path.zsh.inc' ]; then . '/home/tomoyat1/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/tomoyat1/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/tomoyat1/google-cloud-sdk/completion.zsh.inc'; fi
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 . ~/.fzf-tab/fzf-tab.plugin.zsh
 
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/tomoyat1/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/tomoyat1/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/tomoyat1/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/tomoyat1/google-cloud-sdk/completion.zsh.inc'; fi
+
